@@ -1,0 +1,27 @@
+#include <unistd.h>
+#include <stdio.h>
+
+char is_prime(int nb)
+{
+    int tot;
+    int count;
+    
+    tot = 0;
+    count = 0;
+    while(count <= nb)
+    {
+        if(nb%count==0)
+        {
+            tot+=1;
+        }
+        count+=1;
+    }
+    if(tot == 2)
+    {
+        return(write(1, &"PrIMO", 6));
+    }
+    else
+    {
+        return(write(1, &"NÃO É PrIMO", 12));
+    }
+}                
