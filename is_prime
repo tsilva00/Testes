@@ -7,7 +7,7 @@ char is_prime(int nb)
     int count;
     
     tot = 0;
-    count = 0;
+    count = 1;
     while(count <= nb)
     {
         if(nb%count==0)
@@ -18,10 +18,16 @@ char is_prime(int nb)
     }
     if(tot == 2)
     {
-        return(write(1, &"PrIMO", 6));
+        return(write(1, &"Primo\n", 6));
     }
     else
     {
-        return(write(1, &"NÃO É PrIMO", 12));
+        return(write(1, &"Não é primo\n", 12));
     }
-}                
+} 
+
+int main()
+{
+    printf("%c",is_prime(2));
+    return 0;
+}
